@@ -24,7 +24,7 @@
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             background: #0a0a0a;
             color: #ffffff;
-            padding: 60px 16px 20px;
+            padding: 90px 16px 20px;
             height: 100%;
             overflow-y: auto;
             display: flex;
@@ -46,9 +46,9 @@
         }
 
         .category-title {
-            font-size: 18px;
+            font-size: 20px;
             font-weight: 700;
-            color: #b0b0b8;
+            color: #d0d0d8;
             padding: 0 0 12px 4px;
             border-bottom: 1px solid #1e1e1e;
             margin-bottom: 8px;
@@ -70,7 +70,7 @@
             transition: all 0.15s ease;
             font-family: inherit;
             font-size: 17px;
-            color: #ffffff;
+            color: #a0a0a8;
             text-align: left;
             -webkit-tap-highlight-color: transparent;
             outline: none;
@@ -93,21 +93,21 @@
         }
 
         .link-item .left .emoji {
-            font-size: 26px;
+            font-size: 24px;
             line-height: 1;
-            width: 34px;
+            width: 32px;
             text-align: center;
         }
 
         .link-item .left .name {
-            font-weight: 500;
-            color: #f0f0f0;
+            font-weight: 400;
+            color: #a0a0a8;
             font-size: 17px;
         }
 
         .link-item .arrow {
             color: #3a3a3c;
-            font-size: 22px;
+            font-size: 20px;
             font-weight: 300;
             margin-left: 8px;
         }
@@ -134,7 +134,7 @@
         /* Адаптив */
         @media (min-width: 600px) {
             body {
-                padding: 80px 24px 30px;
+                padding: 100px 24px 30px;
             }
             .container {
                 max-width: 480px;
@@ -147,117 +147,4 @@
 
         <!-- === ОСНОВНОЕ === -->
         <div class="category">
-            <div class="category-title">Основное</div>
-
-            <button class="link-item" data-url="https://t.me/CT_FAMILY_NEWS">
-                <span class="left"><span class="emoji">📢</span><span class="name">Канал</span></span>
-                <span class="arrow">›</span>
-            </button>
-
-            <button class="link-item" data-url="https://t.me/boost/CT_FAMILY_NEWS">
-                <span class="left"><span class="emoji">🚀</span><span class="name">Буст</span></span>
-                <span class="arrow">›</span>
-            </button>
-
-            <button class="link-item" data-url="https://t.me/CT_FAMILY_PRICE">
-                <span class="left"><span class="emoji">💰</span><span class="name">Прайс</span></span>
-                <span class="arrow">›</span>
-            </button>
-
-            <button class="link-item" data-url="https://t.me/+R-upvz8N2Ro2Yzky">
-                <span class="left"><span class="emoji">💬</span><span class="name">Общий чат</span></span>
-                <span class="arrow">›</span>
-            </button>
-
-            <button class="link-item" data-url="https://telegra.ph/Pravila-CT-FAMILY-03-20-2">
-                <span class="left"><span class="emoji">📋</span><span class="name">Правила</span></span>
-                <span class="arrow">›</span>
-            </button>
-
-            <button class="link-item" data-url="https://tiktok.com/@ct_family_news">
-                <span class="left"><span class="emoji">🎵</span><span class="name">TikTok</span></span>
-                <span class="arrow">›</span>
-            </button>
-        </div>
-
-        <!-- === КЛУБЫ === -->
-        <div class="category">
-            <div class="category-title">Клубы</div>
-
-            <button class="link-item" data-url="https://t.me/CT_Invites_bot">
-                <span class="left"><span class="emoji">📝</span><span class="name">Заявки в клуб</span></span>
-                <span class="arrow">›</span>
-            </button>
-
-            <button class="link-item" data-url="https://t.me/CTclubbot">
-                <span class="left"><span class="emoji">🤖</span><span class="name">Инфо клубов (бот)</span></span>
-                <span class="arrow">›</span>
-            </button>
-
-            <button class="link-item" data-url="https://t.me/CTclubbot/app">
-                <span class="left"><span class="emoji">📱</span><span class="name">Инфо клубов (мини-апп)</span></span>
-                <span class="arrow">›</span>
-            </button>
-        </div>
-
-        <!-- === SHOP === -->
-        <div class="category">
-            <div class="category-title">Shop</div>
-
-            <button class="link-item" data-url="https://t.me/CT_Family_Donat">
-                <span class="left"><span class="emoji">🎁</span><span class="name">Канал</span></span>
-                <span class="arrow">›</span>
-            </button>
-
-            <button class="link-item" data-url="https://t.me/CT_Family_Donat">
-                <span class="left"><span class="emoji">⚡</span><span class="name">Буст</span></span>
-                <span class="arrow">›</span>
-            </button>
-
-            <button class="link-item" data-url="https://t.me/CT_FAMILY_DONAT_REVIEWS">
-                <span class="left"><span class="emoji">⭐</span><span class="name">Отзывы</span></span>
-                <span class="arrow">›</span>
-            </button>
-        </div>
-
-        <!-- === ЧЁРНЫЙ СПИСОК === -->
-        <div class="category">
-            <div class="category-title">Чёрный список</div>
-
-            <button class="link-item" data-url="https://t.me/BLACKLIST_CT_FAMILY">
-                <span class="left"><span class="emoji">⛔</span><span class="name">Канал</span></span>
-                <span class="arrow">›</span>
-            </button>
-        </div>
-
-        <!-- Кнопка закрытия (вне Telegram) -->
-        <button class="close-btn" id="closeBtn" style="display:none;">Закрыть</button>
-
-    </div>
-
-    <script>
-        const tg = window.Telegram.WebApp;
-        tg.expand();
-        tg.requestFullscreen();
-
-        // Отключаем все выделения
-        document.addEventListener('selectstart', (e) => e.preventDefault());
-
-        // Открываем ссылки
-        document.querySelectorAll('.link-item').forEach(btn => {
-            btn.addEventListener('click', function() {
-                const url = this.dataset.url;
-                if (url) tg.openLink(url);
-            });
-        });
-
-        // Если не в Telegram — показываем кнопку закрытия
-        if (!window.Telegram || !window.Telegram.WebApp) {
-            document.getElementById('closeBtn').style.display = 'block';
-            document.getElementById('closeBtn').addEventListener('click', () => window.close());
-        }
-
-        console.log('Тема:', tg.colorScheme);
-    </script>
-</body>
-</html>
+            <div class="category-title">Основное
