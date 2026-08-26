@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Навигация</title>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@700;800&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -24,7 +25,7 @@
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             background: #0a0a0a;
             color: #ffffff;
-            padding: 120px 16px 20px;
+            padding: 20px 16px 20px;
             height: 100%;
             overflow-y: auto;
             display: flex;
@@ -39,6 +40,31 @@
             padding-bottom: 30px;
         }
 
+        /* Шапка */
+        .header {
+            text-align: center;
+            padding: 30px 0 30px;
+        }
+
+        .header .title {
+            font-family: 'DynaPuff', cursive;
+            font-weight: 800;
+            font-size: 48px;
+            color: #ffffff;
+            letter-spacing: 1px;
+            line-height: 1.1;
+        }
+
+        .header .subtitle {
+            font-family: 'DynaPuff', cursive;
+            font-weight: 700;
+            font-size: 22px;
+            color: #888890;
+            margin-top: 4px;
+            letter-spacing: 0.5px;
+        }
+
+        /* Категория */
         .category {
             margin-bottom: 32px;
         }
@@ -53,6 +79,7 @@
             letter-spacing: 0.3px;
         }
 
+        /* Кнопка-ссылка */
         .link-item {
             display: flex;
             align-items: center;
@@ -129,16 +156,28 @@
 
         @media (min-width: 600px) {
             body {
-                padding: 140px 24px 30px;
+                padding: 30px 24px 30px;
             }
             .container {
                 max-width: 480px;
+            }
+            .header .title {
+                font-size: 56px;
+            }
+            .header .subtitle {
+                font-size: 26px;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
+
+        <!-- Шапка -->
+        <div class="header">
+            <div class="title">CT Family</div>
+            <div class="subtitle">Навигация</div>
+        </div>
 
         <!-- === ОСНОВНОЕ === -->
         <div class="category">
@@ -251,4 +290,4 @@
         console.log('Тема:', tg.colorScheme);
     </script>
 </body>
-</html>
+                                       </html>
