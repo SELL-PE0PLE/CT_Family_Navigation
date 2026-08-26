@@ -98,6 +98,7 @@
             -webkit-tap-highlight-color: transparent;
             outline: none;
             user-select: none;
+            white-space: nowrap; /* Запрещаем перенос */
         }
 
         .link-item:active {
@@ -113,12 +114,13 @@
             display: flex;
             align-items: center;
             gap: 18px;
+            min-width: 0; /* Разрешаем сжатие */
+            flex-shrink: 1;
         }
 
-        /* УВЕЛИЧЕННЫЕ АВАТАРКИ */
         .link-item .left .avatar {
-            width: 64px; /* Было 52px */
-            height: 64px; /* Было 52px */
+            width: 64px;
+            height: 64px;
             border-radius: 50%;
             object-fit: cover;
             flex-shrink: 0;
@@ -128,6 +130,9 @@
             font-weight: 500;
             color: #f0f0f0;
             font-size: 21px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
         .link-item .arrow {
@@ -135,6 +140,7 @@
             font-size: 26px;
             font-weight: 300;
             margin-left: 8px;
+            flex-shrink: 0;
         }
 
         .close-btn {
