@@ -24,7 +24,7 @@
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             background: #0a0a0a;
             color: #ffffff;
-            padding: 90px 16px 20px;
+            padding: 120px 16px 20px;
             height: 100%;
             overflow-y: auto;
             display: flex;
@@ -32,7 +32,6 @@
             justify-content: center;
         }
 
-        /* Контейнер */
         .container {
             max-width: 420px;
             width: 100%;
@@ -40,7 +39,6 @@
             padding-bottom: 30px;
         }
 
-        /* Категория */
         .category {
             margin-bottom: 32px;
         }
@@ -55,7 +53,6 @@
             letter-spacing: 0.3px;
         }
 
-        /* Кнопка-ссылка */
         .link-item {
             display: flex;
             align-items: center;
@@ -112,7 +109,6 @@
             margin-left: 8px;
         }
 
-        /* Кнопка закрытия (если вне Telegram) */
         .close-btn {
             margin-top: 30px;
             padding: 16px;
@@ -131,10 +127,9 @@
             opacity: 0.6;
         }
 
-        /* Адаптив */
         @media (min-width: 600px) {
             body {
-                padding: 100px 24px 30px;
+                padding: 140px 24px 30px;
             }
             .container {
                 max-width: 480px;
@@ -147,4 +142,113 @@
 
         <!-- === ОСНОВНОЕ === -->
         <div class="category">
-            <div class="category-title">Основное
+            <div class="category-title">Основное</div>
+
+            <button class="link-item" data-url="https://t.me/CT_FAMILY_NEWS">
+                <span class="left"><span class="emoji">📢</span><span class="name">Канал</span></span>
+                <span class="arrow">›</span>
+            </button>
+
+            <button class="link-item" data-url="https://t.me/boost/CT_FAMILY_NEWS">
+                <span class="left"><span class="emoji">🚀</span><span class="name">Буст</span></span>
+                <span class="arrow">›</span>
+            </button>
+
+            <button class="link-item" data-url="https://t.me/CT_FAMILY_PRICE">
+                <span class="left"><span class="emoji">💰</span><span class="name">Прайс</span></span>
+                <span class="arrow">›</span>
+            </button>
+
+            <button class="link-item" data-url="https://t.me/+R-upvz8N2Ro2Yzky">
+                <span class="left"><span class="emoji">💬</span><span class="name">Общий чат</span></span>
+                <span class="arrow">›</span>
+            </button>
+
+            <button class="link-item" data-url="https://telegra.ph/Pravila-CT-FAMILY-03-20-2">
+                <span class="left"><span class="emoji">📋</span><span class="name">Правила</span></span>
+                <span class="arrow">›</span>
+            </button>
+
+            <button class="link-item" data-url="https://tiktok.com/@ct_family_news">
+                <span class="left"><span class="emoji">🎵</span><span class="name">TikTok</span></span>
+                <span class="arrow">›</span>
+            </button>
+        </div>
+
+        <!-- === КЛУБЫ === -->
+        <div class="category">
+            <div class="category-title">Клубы</div>
+
+            <button class="link-item" data-url="https://t.me/CT_Invites_bot">
+                <span class="left"><span class="emoji">📝</span><span class="name">Заявки в клуб</span></span>
+                <span class="arrow">›</span>
+            </button>
+
+            <button class="link-item" data-url="https://t.me/CTclubbot">
+                <span class="left"><span class="emoji">🤖</span><span class="name">Инфо клубов (бот)</span></span>
+                <span class="arrow">›</span>
+            </button>
+
+            <button class="link-item" data-url="https://t.me/CTclubbot/app">
+                <span class="left"><span class="emoji">📱</span><span class="name">Инфо клубов (мини-апп)</span></span>
+                <span class="arrow">›</span>
+            </button>
+        </div>
+
+        <!-- === SHOP === -->
+        <div class="category">
+            <div class="category-title">Shop</div>
+
+            <button class="link-item" data-url="https://t.me/CT_Family_Donat">
+                <span class="left"><span class="emoji">🎁</span><span class="name">Канал</span></span>
+                <span class="arrow">›</span>
+            </button>
+
+            <button class="link-item" data-url="https://t.me/CT_Family_Donat">
+                <span class="left"><span class="emoji">⚡</span><span class="name">Буст</span></span>
+                <span class="arrow">›</span>
+            </button>
+
+            <button class="link-item" data-url="https://t.me/CT_FAMILY_DONAT_REVIEWS">
+                <span class="left"><span class="emoji">⭐</span><span class="name">Отзывы</span></span>
+                <span class="arrow">›</span>
+            </button>
+        </div>
+
+        <!-- === ЧЁРНЫЙ СПИСОК === -->
+        <div class="category">
+            <div class="category-title">Чёрный список</div>
+
+            <button class="link-item" data-url="https://t.me/BLACKLIST_CT_FAMILY">
+                <span class="left"><span class="emoji">⛔</span><span class="name">Канал</span></span>
+                <span class="arrow">›</span>
+            </button>
+        </div>
+
+        <button class="close-btn" id="closeBtn" style="display:none;">Закрыть</button>
+
+    </div>
+
+    <script>
+        const tg = window.Telegram.WebApp;
+        tg.expand();
+        tg.requestFullscreen();
+
+        document.addEventListener('selectstart', (e) => e.preventDefault());
+
+        document.querySelectorAll('.link-item').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const url = this.dataset.url;
+                if (url) tg.openLink(url);
+            });
+        });
+
+        if (!window.Telegram || !window.Telegram.WebApp) {
+            document.getElementById('closeBtn').style.display = 'block';
+            document.getElementById('closeBtn').addEventListener('click', () => window.close());
+        }
+
+        console.log('Тема:', tg.colorScheme);
+    </script>
+</body>
+</html>
