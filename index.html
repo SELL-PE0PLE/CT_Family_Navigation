@@ -98,7 +98,6 @@
             -webkit-tap-highlight-color: transparent;
             outline: none;
             user-select: none;
-            white-space: nowrap; /* Запрещаем перенос */
         }
 
         .link-item:active {
@@ -114,8 +113,9 @@
             display: flex;
             align-items: center;
             gap: 18px;
-            min-width: 0; /* Разрешаем сжатие */
+            min-width: 0;
             flex-shrink: 1;
+            overflow: visible; /* Разрешаем выход текста за пределы */
         }
 
         .link-item .left .avatar {
@@ -131,8 +131,9 @@
             color: #f0f0f0;
             font-size: 21px;
             white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
+            /* Убираем обрезание с многоточием */
+            overflow: visible;
+            text-overflow: clip;
         }
 
         .link-item .arrow {
