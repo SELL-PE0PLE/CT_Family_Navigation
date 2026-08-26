@@ -25,7 +25,7 @@
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             background: #0a0a0a;
             color: #ffffff;
-            padding: 20px 16px 20px;
+            padding: 60px 16px 20px;
             height: 100%;
             overflow-y: auto;
             display: flex;
@@ -43,25 +43,30 @@
         /* Шапка */
         .header {
             text-align: center;
-            padding: 30px 0 30px;
+            padding: 10px 0 35px;
         }
 
         .header .title {
             font-family: 'DynaPuff', cursive;
             font-weight: 800;
-            font-size: 48px;
+            font-size: 52px;
             color: #ffffff;
             letter-spacing: 1px;
             line-height: 1.1;
+            text-shadow: 0 0 40px rgba(255, 255, 255, 0.05);
         }
 
         .header .subtitle {
             font-family: 'DynaPuff', cursive;
             font-weight: 700;
-            font-size: 22px;
-            color: #888890;
-            margin-top: 4px;
-            letter-spacing: 0.5px;
+            font-size: 24px;
+            background: linear-gradient(90deg, #f7971e, #ffd200);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-top: 2px;
+            letter-spacing: 2px;
+            text-shadow: none;
         }
 
         /* Категория */
@@ -156,16 +161,16 @@
 
         @media (min-width: 600px) {
             body {
-                padding: 30px 24px 30px;
+                padding: 80px 24px 30px;
             }
             .container {
                 max-width: 480px;
             }
             .header .title {
-                font-size: 56px;
+                font-size: 60px;
             }
             .header .subtitle {
-                font-size: 26px;
+                font-size: 28px;
             }
         }
     </style>
@@ -176,7 +181,7 @@
         <!-- Шапка -->
         <div class="header">
             <div class="title">CT Family</div>
-            <div class="subtitle">Навигация</div>
+            <div class="subtitle">✦ Навигация ✦</div>
         </div>
 
         <!-- === ОСНОВНОЕ === -->
@@ -290,4 +295,4 @@
         console.log('Тема:', tg.colorScheme);
     </script>
 </body>
-                                       </html>
+</html>
