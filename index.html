@@ -23,9 +23,9 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: var(--tg-theme-bg-color, #0a0a0a);
-            color: var(--tg-theme-text-color, #ffffff);
-            padding: 70px 16px 20px;
+            background: #0a0a0a;
+            color: #ffffff;
+            padding: 60px 16px 20px;
             height: 100%;
             overflow-y: auto;
             display: flex;
@@ -43,43 +43,42 @@
         /* Шапка */
         .header {
             text-align: center;
-            padding: 0 0 35px;
+            padding: 10px 0 35px;
         }
 
         .header .title {
             font-family: 'DynaPuff', cursive;
             font-weight: 800;
-            font-size: 48px;
-            color: var(--tg-theme-text-color, #ffffff);
-            letter-spacing: 0.5px;
+            font-size: 52px;
+            color: #ffffff;
+            letter-spacing: 1px;
             line-height: 1.1;
+            text-shadow: 0 0 40px rgba(255, 255, 255, 0.05);
         }
 
         .header .subtitle {
             font-family: 'DynaPuff', cursive;
             font-weight: 700;
-            font-size: 18px;
-            color: var(--tg-theme-hint-color, #8e8e93);
-            margin-top: -2px;
+            font-size: 22px;
+            color: #7a8a9a;
+            margin-top: 2px;
             letter-spacing: 3px;
             text-transform: uppercase;
-            opacity: 0.7;
         }
 
         /* Категория */
         .category {
-            margin-bottom: 28px;
+            margin-bottom: 32px;
         }
 
         .category-title {
-            font-size: 16px;
-            font-weight: 600;
-            color: var(--tg-theme-hint-color, #8e8e93);
-            padding: 0 0 10px 4px;
-            border-bottom: 1px solid var(--tg-theme-separator-color, #1e1e1e);
-            margin-bottom: 6px;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
+            font-size: 20px;
+            font-weight: 700;
+            color: #d0d0d8;
+            padding: 0 0 12px 4px;
+            border-bottom: 1px solid #1e1e1e;
+            margin-bottom: 8px;
+            letter-spacing: 0.3px;
         }
 
         /* Кнопка-ссылка */
@@ -87,17 +86,17 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 14px 16px;
-            margin-top: 4px;
-            background: var(--tg-theme-secondary-bg-color, #141414);
-            border-radius: 12px;
+            padding: 16px 18px;
+            margin-top: 8px;
+            background: #141414;
+            border-radius: 14px;
             border: none;
             width: 100%;
             cursor: pointer;
             transition: all 0.15s ease;
             font-family: inherit;
-            font-size: 16px;
-            color: var(--tg-theme-text-color, #ffffff);
+            font-size: 17px;
+            color: #a0a0a8;
             text-align: left;
             -webkit-tap-highlight-color: transparent;
             outline: none;
@@ -105,8 +104,8 @@
         }
 
         .link-item:active {
-            background: var(--tg-theme-hint-color, #2a2a2a);
-            transform: scale(0.98);
+            background: #1a1a1a;
+            transform: scale(0.97);
         }
 
         .link-item:focus {
@@ -120,21 +119,21 @@
         }
 
         .link-item .left .emoji {
-            font-size: 22px;
+            font-size: 24px;
             line-height: 1;
-            width: 30px;
+            width: 32px;
             text-align: center;
         }
 
         .link-item .left .name {
             font-weight: 400;
-            color: var(--tg-theme-text-color, #f0f0f0);
-            font-size: 16px;
+            color: #a0a0a8;
+            font-size: 17px;
         }
 
         .link-item .arrow {
-            color: var(--tg-theme-hint-color, #3a3a3c);
-            font-size: 18px;
+            color: #3a3a3c;
+            font-size: 20px;
             font-weight: 300;
             margin-left: 8px;
         }
@@ -142,10 +141,10 @@
         .close-btn {
             margin-top: 30px;
             padding: 16px;
-            background: var(--tg-theme-secondary-bg-color, #2a2a2a);
-            color: var(--tg-theme-text-color, #ffffff);
+            background: #2a2a2a;
+            color: #ffffff;
             border: none;
-            border-radius: 12px;
+            border-radius: 14px;
             font-size: 16px;
             font-weight: 600;
             width: 100%;
@@ -159,16 +158,16 @@
 
         @media (min-width: 600px) {
             body {
-                padding: 90px 24px 30px;
+                padding: 80px 24px 30px;
             }
             .container {
                 max-width: 480px;
             }
             .header .title {
-                font-size: 56px;
+                font-size: 60px;
             }
             .header .subtitle {
-                font-size: 20px;
+                font-size: 24px;
             }
         }
     </style>
@@ -293,4 +292,4 @@
         console.log('Тема:', tg.colorScheme);
     </script>
 </body>
-</html>
+        </html>
