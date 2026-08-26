@@ -10,6 +10,8 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+            -webkit-touch-callout: none;
         }
 
         html, body {
@@ -22,32 +24,35 @@
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             background: #0a0a0a;
             color: #ffffff;
-            padding: 20px 16px 20px;
+            padding: 60px 16px 20px;
             height: 100%;
             overflow-y: auto;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
         }
 
         /* Контейнер */
         .container {
             max-width: 420px;
+            width: 100%;
             margin: 0 auto;
             padding-bottom: 30px;
         }
 
         /* Категория */
         .category {
-            margin-bottom: 28px;
+            margin-bottom: 32px;
         }
 
         .category-title {
-            font-size: 13px;
+            font-size: 18px;
             font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.8px;
-            color: #6b6b70;
-            padding: 0 0 10px 4px;
+            color: #b0b0b8;
+            padding: 0 0 12px 4px;
             border-bottom: 1px solid #1e1e1e;
-            margin-bottom: 6px;
+            margin-bottom: 8px;
+            letter-spacing: 0.3px;
         }
 
         /* Кнопка-ссылка */
@@ -55,8 +60,8 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 14px 16px;
-            margin-top: 6px;
+            padding: 16px 18px;
+            margin-top: 8px;
             background: #141414;
             border-radius: 14px;
             border: none;
@@ -64,14 +69,21 @@
             cursor: pointer;
             transition: all 0.15s ease;
             font-family: inherit;
-            font-size: 15px;
+            font-size: 17px;
             color: #ffffff;
             text-align: left;
+            -webkit-tap-highlight-color: transparent;
+            outline: none;
+            user-select: none;
         }
 
         .link-item:active {
-            background: #1e1e1e;
-            transform: scale(0.98);
+            background: #1a1a1a;
+            transform: scale(0.97);
+        }
+
+        .link-item:focus {
+            outline: none;
         }
 
         .link-item .left {
@@ -81,20 +93,21 @@
         }
 
         .link-item .left .emoji {
-            font-size: 24px;
+            font-size: 26px;
             line-height: 1;
-            width: 30px;
+            width: 34px;
             text-align: center;
         }
 
         .link-item .left .name {
             font-weight: 500;
             color: #f0f0f0;
+            font-size: 17px;
         }
 
         .link-item .arrow {
             color: #3a3a3c;
-            font-size: 20px;
+            font-size: 22px;
             font-weight: 300;
             margin-left: 8px;
         }
@@ -121,7 +134,7 @@
         /* Адаптив */
         @media (min-width: 600px) {
             body {
-                padding: 30px 24px 30px;
+                padding: 80px 24px 30px;
             }
             .container {
                 max-width: 480px;
@@ -227,6 +240,9 @@
         tg.expand();
         tg.requestFullscreen();
 
+        // Отключаем все выделения
+        document.addEventListener('selectstart', (e) => e.preventDefault());
+
         // Открываем ссылки
         document.querySelectorAll('.link-item').forEach(btn => {
             btn.addEventListener('click', function() {
@@ -241,7 +257,6 @@
             document.getElementById('closeBtn').addEventListener('click', () => window.close());
         }
 
-        // Поддержка тёмной темы
         console.log('Тема:', tg.colorScheme);
     </script>
 </body>
